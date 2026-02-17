@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aloe Face Cleanser - Viva Skyn</title>
+    <link rel="stylesheet" href="css/main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="container">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <img src="img/vivaskinnlogobakgrund.jpg" alt="Viva Skyn Logo" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container product-page">
+      <section class="product-details">
+        <div class="product-images">
+
+  <!-- Stor bild -->
+  <img
+    id="mainImage"
+    src="img/faceclenser.png"
+    alt="Aloe Face Cleanser"
+    class="main-product-img"
+  />
+
+  <!-- Små bilder -->
+  <div class="thumbnails">
+    <img src="img/faceclenser.png" onclick="changeImage(this)" />
+    <img src="img/green-gel-texture-with-bubbles.jpg" onclick="changeImage(this)" />
+  </div>
+
+</div>
+
+        <div class="product-info">
+          <h1>Aloe Face Cleanser</h1>
+          <p class="price">129 SEK</p>
+          <div class="description">
+  <p>
+    Give your skin the care it deserves with Viva Skyn Aloe Vera Face Cleanser.
+    Enriched with natural aloe vera, this gentle cleanser soothes, hydrates,
+    and balances your skin.
+  </p>
+
+  <ul>
+    <li>Natural Aloe Vera: Soothes, hydrates, and promotes healthy skin.</li>
+    <li>Gentle Formula: Cleanses without drying.</li>
+    <li>Daily Use: Keeps your skin fresh, soft, and radiant.</li>
+  </ul>
+</div>
+
+          </p>
+          <button class="ad-to-cart">Added to cart!</button>
+        </div>
+      </section>
+<section class="related-products">
+
+  <h2>You may also like</h2>
+
+  <div class="related-grid">
+
+    <div class="related-card">
+      <img src="img/croppadswatches-green.png" alt="Hydra, Bright and Renew">
+      <h3>Hydra, Bright & Renew</h3>
+      <p class="price">129 SEK</p>
+      <button class="small-btn">View product</button>
+    </div>
+
+    <div class="related-card">
+      <img src="img/croppasAloevivadrops.png" alt="Aloe Viva Drops">
+      <h3>Aloe Viva Drops</h3>
+      <p class="price">179 SEK</p>
+      <button class="small-btn">View product</button>
+    </div>
+
+    <div class="related-card">
+      <img src="img/serumcroppad.png" alt="Skyncredible Drops">
+      <h3>Skyncredible Drops</h3>
+      <p class="price">249 SEK</p>
+      <button class="small-btn">View product</button>
+    </div>
+
+  </div>
+
+</section>
+
+
+     <!-- 
+      
+     <section class="more-products">
+        <h2>Other products you may like!</h2>
+        <div class="extra-images">
+          <div class="product-card">
+            <img
+              src="img/croppadswatches-green.png"
+              alt="Hydra, Bright and Renew"
+            />
+             <h3>Hydra, Bright and Renew</h3>
+            <p class="price">129 SEK</p>
+          </div>
+          <div class="product-card">
+            <img src="img/croppasAloevivadrops.png" alt="Aloe Viva Drops" />
+            <h3>Aloe Viva Drops</h3>
+            <p class="price">179 SEK</p>
+          </div>
+        </div>
+      </section>
+     --> 
+    </main>
+    <footer class="footer">
+      <div class="footer-section">
+        <h3>Viva Skyn</h3>
+        <p>Skincare for all types of skin.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Email: info@vivaskyn.com</p>
+        <p>Instagram: @Vivaskyn</p>
+      </div>
+      <div class="footer-bottom">© Viva Skyn 2026</div> -->
+    </footer>
+    <script>
+function changeImage(element) {
+  document.getElementById("mainImage").src = element.src;
+}
+</script>
+
+  </body>
+</html>

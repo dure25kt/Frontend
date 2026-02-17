@@ -1,35 +1,50 @@
 <!doctype html>
-<html lang="sv">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Viva Skyn - Products</title>
-    <link href="style.css" rel="stylesheet" />
-  </head>
+    <link rel="stylesheet" href="css/main.css" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
   <body>
-    <header>
-      <div class="nav">
-        <h1>Viva Skyn</h1>
-        <div class="nav-links">
-          <a href="#">Home</a>
-          <a href="#">Products</a>
-          <a href="#">Cart</a>
-        </div>
-      </div>
+    <header class="container">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <img src="img/vivaskinnlogobakgrund.jpg" />
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html"> Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li>
+            <a href="cart.html">Cart</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main class="container">
-      <div class="product-gallety">
-      <img
-        src="product/faceclenser (kopia).png"
-        alt="Viva Face Cleaser"
-        class="main-image"
-      />
+      <div class="product-gallery">
+        <img
+          class="main-image"
+          src="img/faceclenser.png"
+          alt="Viva Face Cleaser"
+        />
 
-      <div class="thumbnails">
-        <img src="product/faceclenser (kopia).png" onclick="changeImage(this)" />
-        <img src="product/green-gel-texture-with-bubbles (kopia).jpg" onclick="changeImage(this)" />
+        <div class="thumbnails">
+          <img src="img/faceclenser.png" onclick="changeImage(this)" />
+          <img
+            src="img/green-gel-texture-with-bubbles.jpg"
+            onclick="changeImage(this)"
+          />
+        </div>
       </div>
 
       <div class="product-info">
@@ -57,19 +72,27 @@
       </div>
     </main>
 
-    <footer>© Viva Skyn 2026</footer>
+    <footer class="footer">
+      <div class="footer-section">
+        <h3>Viva Skyn</h3>
+        <p>Skyncare for all types of skin.</p>
+      </div>
 
-    <script>
-      function addToCart(name, price) {
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        cart.push({ name, price });
-        localStorage.setItem("cart", JSON.stringify(cart));
-        alert("Added to cart!");
-      }
+      <div class="footer-section">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </div>
 
-      function changeImage(img) {
-        document.querySelector(".product-image").src = img.src;
-      }
-    </script>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Email: info@vivaskyn.com</p>
+        <p>Instagram: @Vivaskyn</p>
+      </div>
+
+      <div class="footer-bottom">© Viva Skyn 2026</div>
+    </footer>
   </body>
 </html>
