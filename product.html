@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viva Skyn - Products</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <div class="nav">
+        <h1>Viva Skyn</h1>
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Products</a>
+          <a href="#">Cart</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="product-gallety">
+      <img
+        src="product/faceclenser (kopia).png"
+        alt="Viva Face Cleaser"
+        class="main-image"
+      />
+
+      <div class="thumbnails">
+        <img src="product/faceclenser (kopia).png" onclick="changeImage(this)" />
+        <img src="product/green-gel-texture-with-bubbles (kopia).jpg" onclick="changeImage(this)" />
+      </div>
+
+      <div class="product-info">
+        <h2>Aloe Face Cleanser</h2>
+
+        <div class="price">129 SEK</div>
+
+        <p class="description">
+          Give your skin the care it deserves with Viva Skyn Aloe Vera Face
+          Cleanser. Enriched with natural aloe vera, this gentle cleanser
+          soothes, hydrates, and balances your skin while effectively removing
+          dirt, excess oil, and makeup. Suitable for all skin types, even
+          sensitive skin, leaving your face soft, refreshed, and glowing. Key
+          Benefits: 1. Natural Aloe Vera: Soothes, hydrates, and promotes
+          healthy skin. 2. Gentle Formula: Cleanses without drying. 3. Daily
+          Use: Keeps your skin fresh, soft, and radiant.
+        </p>
+        <button class="buy-btn" onclick="addToCart('Aloe Face Cream', 129)">
+          Buy now
+        </button>
+
+        <div class="info-box">Description</div>
+        <div class="info-box">Ingredients</div>
+        <div class="info-box">Shipping & Payment</div>
+      </div>
+    </main>
+
+    <footer>© Viva Skyn 2026</footer>
+
+    <script>
+      function addToCart(name, price) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({ name, price });
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert("Added to cart!");
+      }
+
+      function changeImage(img) {
+        document.querySelector(".product-image").src = img.src;
+      }
+    </script>
+  </body>
+</html>
