@@ -4,6 +4,7 @@
   --accent: #f691a9;
   --text-main: #222222;
   --text-muted: #555;
+  --accent-hover: #80a6d5;
 }
 
 * {
@@ -49,7 +50,7 @@ main p {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-al}
+}
 
 header {
   position: sticky;
@@ -65,10 +66,10 @@ header {
 }
 
 .nav {
- display: flex;
- align-items: center;
- justify-content: space-between;
- height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
 }
 
 .logo img {
@@ -129,12 +130,6 @@ header {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 4rem;
-}
-
-.product-grind {
-  display: grind;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 3rem;
 }
 
 /*Product card*/
@@ -200,18 +195,25 @@ button:hover {
 .image-row-slider {
   position: relative;
   overflow: hidden;
-  max-width: 1000px;  /* kan ändras */
+  max-width: none; /* kan ändras */
   margin: 2rem auto;
 }
 
 .image-row {
-  display: flex;
-  transition: transform 0.3s ease-in-out;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.image-row img {
+  width: 100%;
+  height: auto;
+  gap: 1.5rem;
 }
 
 .image-row .product-card {
-  flex: 0 0 300px; /* varje kort tar 300px */
-  margin-right: 10px;
+  flex: 0 0 400px; /* varje kort tar 300px */
+  margin-right: 15px;
 }
 
 .image-row-slider button.prev,
@@ -261,7 +263,7 @@ button:hover {
 .aloe-images img,
 .extra-images img {
   width: 100%;
-  max-width: 200px;
+  max-width: 1200px;
   height: auto;
   border-radius: 10px;
   margin: 0 auto;
@@ -275,11 +277,20 @@ button:hover {
 }
 
 .about-banner {
-  width: 100%;       /* fyller hela bredden */
-  height: auto;      /* behåller proportionerna */
+  width: 100%; /* fyller hela bredden */
+  height: auto; /* behåller proportionerna */
   object-fit: cover; /* beskär snyggt om bredden ändras */
   border-radius: 12px; /* valfritt, rundade hörn */
   margin-bottom: 30px; /* luft mellan bilden och rubrik */
+}
+
+.our-products {
+  width: 100%; /* fyller hela bredden */
+  max-width: 1200px;
+  height: auto; /* behåller proportionerna */
+  display: block;
+  margin: 0 auto 30 px;
+  border-radius: 12px; /* valfritt, rundade hörn */
 }
 
 /*Product page style*/
@@ -298,14 +309,17 @@ button:hover {
 }
 
 .product-images {
+  flex: 2;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 400px;
+  width: 100%;
+  max-width: none;
 }
 
 .product-images .main-product-img {
   width: 100%;
+  height: auto;
   border-radius: 12px;
 }
 
@@ -338,7 +352,7 @@ button:hover {
 
 .more-products h2 {
   text-align: center;
-  font-size: 1.8rerm;
+  font-size: 1.8rem;
   margin-bottom: 2rem;
 }
 
@@ -376,6 +390,19 @@ button:hover {
 
   .product-info {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-row {
+    grid-template-columns: 3fr;
+    gap: 1re;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 3fr;
   }
 }
 
@@ -422,7 +449,9 @@ button:hover {
   background: var(--bg-soft);
   padding: 20px;
   border-radius: 16px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .related-card img {
@@ -448,7 +477,7 @@ button:hover {
 /* Hover effect */
 .related-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 /* Button */
@@ -468,12 +497,27 @@ button:hover {
   color: white;
 }
 
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.did-you {
+  width: 100%; /* fyller hela bredden */
+  height: auto; /* behåller proportionerna */
+  display: block;
+  object-fit: cover; /* beskär snyggt om bredden ändras */
+  border-radius: 0px; /* valfritt, rundade hörn */
+  padding: 0;
+  margin: 0; /* luft mellan bilden och rubrik */
+}
 
 /*FOOTER*/
 .footer {
   background: var(--accent);
   padding: 3rem 2rem 1rem;
-  margin-top: 4rem;
+  margin-top: 0rem;
 }
 
 .footer-container {
@@ -496,8 +540,8 @@ button:hover {
   font-family: 0.95rem;
 }
 
-.footer-section a: hover {
-  color: var(--bg-muted);
+.footer-section a:hover {
+  color: var(--text-muted);
 }
 
 .footer-section ul {
@@ -511,4 +555,247 @@ button:hover {
   margin-top: 2rem;
   font-size: 0.85rem;
   color: var(--bg-main);
+}
+
+<!doctype
+  html
+  > <html
+  lang="en"
+  > <head
+  > <meta
+  charset="UTF-8"
+  > <meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+  > <title
+  > Checkout
+  -
+  Viva
+  Skyn</title
+  > <link
+  rel="stylesheet"
+  href="css/main.css"
+  > </head
+  > <body
+  > <header
+  class="container"
+  > <nav
+  class="nav"
+  > <a
+  href="index.html"
+  class="logo"
+  > <img
+  src="img/vivaskinnlogobakgrund.jpg"
+  alt="Logo"
+  > </a
+  > <ul
+  class="nav-links"
+  > <li
+  > <a
+  href="index.html"
+  > Home</a
+  > </li
+  > <li
+  > <a
+  href="products.html"
+  > Products</a
+  > </li
+  > <li
+  > <a
+  href="cart.html"
+  > Cart</a
+  > </li
+  > </ul
+  > </nav
+  > </header
+  > <main
+  class="container checkout-page"
+  > <h1
+  > Checkout</h1
+  > <div
+  class="checkout-layout"
+  > <!--
+  Customer
+  Form
+  --
+  > <section
+  class="checkout-form"
+  > <h2
+  > Shipping
+  Information</h2
+  > <form
+  > <input
+  type="text"
+  placeholder="Full Name"
+  required
+  > <input
+  type="email"
+  placeholder="Email Address"
+  required
+  > <input
+  type="text"
+  placeholder="Address"
+  required
+  > <input
+  type="text"
+  placeholder="City"
+  required
+  > <input
+  type="text"
+  placeholder="Postal Code"
+  required
+  > <h2
+  > Payment</h2
+  > <input
+  type="text"
+  placeholder="Card Number"
+  required
+  > <input
+  type="text"
+  placeholder="MM/YY"
+  required
+  > <input
+  type="text"
+  placeholder="CVC"
+  required
+  > <button
+  type="submit"
+  > Complete
+  Purchase</button
+  > </form
+  > </section
+  > <!--
+  Order
+  Summary
+  --
+  > <section
+  class="checkout-summary"
+  > <h2
+  > Your
+  Order</h2
+  > <div
+  class="summary-item"
+  > <span
+  > Viva
+  Cream</span
+  > <span
+  > 99
+  SEK</span
+  > </div
+  > <div
+  class="summary-item"
+  > <span
+  > Skyncredible
+  Drops</span
+  > <span
+  > 249
+  SEK</span
+  > </div
+  > <hr
+  > <div
+  class="summary-total"
+  > <strong
+  > Total</strong
+  > <strong
+  > 348
+  SEK</strong
+  > </div
+  > </section
+  > </div
+  > </main
+  > <footer
+  class="footer"
+  > <div
+  class="footer-section"
+  > <h3
+  > Viva
+  Skyn</h3
+  > <p
+  > Skincare
+  for
+  all
+  types
+  of
+  skin.</p
+  > </div
+  > </footer
+  > </body
+  > </html
+  > .cart-page
+  h1,
+.checkout-page h1 {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--bg-soft);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.cart-item img {
+  width: 80px;
+  border-radius: 8px;
+}
+
+.cart-total {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.checkout-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: var(--accent);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.checkout-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checkout-form input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.checkout-form button {
+  margin-top: 15px;
+}
+
+.product-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+.product-filters button {
+  background-color: var(--accent);
+  color: var(--bg-soft);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.product-filters button:hover {
+  background-color: var(--accent);
 }

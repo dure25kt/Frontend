@@ -28,21 +28,56 @@
       </nav>
     </header>
 
-    <main class="container Products">
-      <h1>Our Products</h1>
-      <div class="product-grid">
-        <div class="product-card">
+    <main class="container products">
+      <section class="products-hero">
+        <img
+          src="img/storserum,png.png"
+          alt="Our Products"
+          class="our-products"
+        />
+      </section>
+
+      <section class="product-filters">
+        <button onclick="filterProducts('all')">All</button>
+        <button onclick="filterProducts('best')">Best Sellers</button>
+        <button onclick="filterProducts('cream')">Face Cream</button>
+        <button onclick="filterProducts('serum')">Serum</button>
+        <button onclick="filterProducts('cleanser')">Face Cleanser</button>
+        <button onclick="filterProducts('sun')">Sunscreen</button>
+        <button onclick="filterProducts('body')">Body Care</button>
+        <button onclick="filterProducts('aloe')">Aloe Viva</button>
+        <button onclick="filterProducts('sets')">Sets</button>
+      </section>
+
+      <section class="image-row">
+        <a href="vivaskyncream.html" class="product-card cream best">
           <img src="img/2krämviva.png" alt="Viva Skyn Cream" />
+          <h3>Viva Skyn Cream</h3>
           <p class="price">149 SEK</p>
+        </a>
+
+        <a href="skynblock.html" class="product-card cream best">
+          <img src="img/krömgul.png" alt="Skyn Block 30" />
+          <h3>Skyn Block 30</h3>
+          <p class="price">75 SEK</p>
+        </a>
+
+        <div class="product-card sets best">
+          <img
+            src="img/three-droppers-with-colorful-liquids-spa-setting.jpg"
+            alt="The Top Three"
+          />
+          <h3>The Top Three</h3>
+          <p class="price">349 SEK</p>
         </div>
 
-        <div class="product-card">
-          <img src="img/rosacroppad.pmg.png" alt="Sunkissed Recovery" />
-          <h3>Sunkissed Recovery</h3>
-          <p class="price">149 SEK</p>
+        <div class="product-card cleanser aloe">
+          <img src="img/croppadfaceclenser.png" alt="Aloe Face Cleanser" />
+          <h3>Aloe Face Cleanser</h3>
+          <p class="price">129 SEK</p>
         </div>
 
-        <div class="product-card">
+        <div class="product-card body">
           <img
             src="img/skincare-cream-product-different-skin-tones.png"
             alt="Viva la Moist Body Lotion"
@@ -51,13 +86,25 @@
           <p class="price">179 SEK</p>
         </div>
 
-        <!-- Aloe Collection -->
-        <div class="product-card">
-          <img src="img/croppadfaceclenser.png" alt="Aloe Face Cleanser" />
-          <h3>Aloe Face Cleanser</h3>
-          <p class="price">129 SEK</p>
+        <div class="product-card body">
+          <img src="img/croppedswatch.png" alt="Pink Wave" />
+          <h3>Pink Wave</h3>
+          <p class="price">399 SEK</p>
         </div>
-        <div class="product-card">
+
+        <div class="product-card cream best">
+          <img src="img/croppad1krämviva.png" alt="Viva Cream" />
+          <h3>Viva Cream</h3>
+          <p class="price">99 SEK</p>
+        </div>
+
+        <div class="product-card body">
+          <img src="img/bloomcroppad.png" alt="Bloom Sundaze Body Oil" />
+          <h3>Bloom Sundaze Body Oil</h3>
+          <p class="price">349 SEK</p>
+        </div>
+
+        <div class="product-card aloe">
           <img
             src="img/croppadswatches-green.png"
             alt="Hydra, Bright and Renew"
@@ -65,63 +112,45 @@
           <h3>Hydra, Bright and Renew</h3>
           <p class="price">129 SEK</p>
         </div>
-        <div class="product-card">
+
+        <div class="product-card serum best">
+          <img src="img/serumcroppad.png" alt="Skyncredible Drops" />
+          <h3>Skyncredible Drops</h3>
+          <p class="price">249 SEK</p>
+        </div>
+
+        <div class="product-card sun best">
+          <img src="img/VIVAbakgrundkroppad.png" alt="Glow Shield" />
+          <h3>Glow Shield</h3>
+          <p class="price">99 SEK</p>
+        </div>
+
+        <div class="product-card sun">
+          <img src="img/croppedsmily.png" alt="Skyn Block Ultra 50" />
+          <h3>Skyn Block Ultra</h3>
+          <p class="price">99 SEK</p>
+        </div>
+
+        <div class="product-card aloe">
           <img src="img/croppasAloevivadrops.png" alt="Aloe Viva Drops" />
           <h3>Aloe Viva Drops</h3>
           <p class="price">179 SEK</p>
         </div>
 
-        <!-- Trending -->
-        <div class="product-card">
-          <img src="img/croppad1krämviva.png" alt="Viva Cream" />
-          <h3>Viva Cream</h3>
-          <p class="price">99 SEK</p>
-        </div>
-        <div class="product-card">
+        <div class="product-card cleanser">
           <img src="img/orangecroppad.png" alt="Skyn Clear Gel" />
           <h3>Skyn Clear Gel</h3>
           <p class="price">109 SEK</p>
         </div>
-        <div class="product-card">
-          <img src="img/bloomcroppad.png" alt="Bloom Sundaze Body Oil" />
-          <h3>Bloom Sundaze Body Oil</h3>
-          <p class="price">349 SEK</p>
+
+        <div class="product-card best">
+          <img src="img/rosacroppad.pmg.png" alt="Sunkissed Recovery" />
+          <h3>Viva Skyn Sunkissed Recovery</h3>
+          <p class="price">149 SEK</p>
         </div>
-        <div class="product-card">
-          <img src="img/krömgul.png" alt="Skyn Block 30" />
-          <h3>Skyn Block 30</h3>
-          <p class="price">75 SEK</p>
-        </div>
-        <div class="product-card">
-          <img src="img/VIVAbakgrundkroppad.png" alt="Glow Shield 50" />
-          <h3>Glow Shield 50</h3>
-          <p class="price">99 SEK</p>
-        </div>
-        <div class="product-card">
-          <img src="img/croppedsmily.png" alt="Skyn Block Ultra" />
-          <h3>Skyn Block Ultra</h3>
-          <p class="price">99 SEK</p>
-        </div>
-        <div class="product-card">
-          <img
-            src="img/three-droppers-with-colorful-liquids-spa-setting.jpg"
-            alt="The Top Three"
-          />
-          <h3>The Top Three</h3>
-          <p class="price">349 SEK</p>
-        </div>
-        <div class="product-card">
-          <img src="img/croppedswatch.png" alt="Pink Wave" />
-          <h3>Pink Wave</h3>
-          <p class="price">399 SEK</p>
-        </div>
-        <div class="product-card">
-          <img src="img/serumcroppad.png" alt="Skyncredible Drops" />
-          <h3>Skyncredible Drops</h3>
-          <p class="price">249 SEK</p>
-        </div>
-      </div>
+      </section>
     </main>
+
     <footer class="footer">
       <div class="footer-section">
         <h3>Viva Skyn</h3>
