@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="showCart">
     <header class="container">
       <nav class="nav">
         <a href="index.html" class="logo">
@@ -24,12 +24,16 @@
         <ul class="nav-links">
           <li><a href="index.html"> Home</a></li>
           <li><a href="products.html">Products</a></li>
-          <li>
-            <a href="cart.html"
-              ><caption></caption>
-              Cart</a
-            >
+
+          <li class="cart-icon">
+            <a href="cart.html">
+            <svg class="w-[24px] h-[24px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+</svg>
+ <span id="cart-count">0</span>
+            </a>
           </li>
+
         </ul>
       </nav>
     </header>

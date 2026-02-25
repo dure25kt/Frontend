@@ -23,7 +23,28 @@
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="products.html">Products</a></li>
-          <li><a href="cart.html">Cart</a></li>
+          <li class="cart-icon">
+            <a href="cart.html">
+              <svg
+                class="w-[24px] h-[24px] text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"
+                />
+              </svg>
+              <span id="cart-count">0</span>
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -31,72 +52,83 @@
     <main class="container product-page">
       <section class="product-details">
         <div class="product-images">
+          <img
+            id="mainImage"
+            src="img/krömgul.png"
+            alt="Viva Skyn Cream"
+            class="main-product-img"
+          />
 
-
-  <img
-    id="mainImage"
-    src="img/krömgul.png"
-    alt="Viva Skyn Cream"
-    class="main-product-img"
-  />
-
-  <!-- Små bilder -->
-  <div class="thumbnails">
-    <img src="img/krömgul.png" onclick="changeImage(this)" />
-    <img src="img/skynblock.png" onclick="changeImage(this)" />
-  </div>
-
-</div>
+          <!-- Små bilder -->
+          <div class="thumbnails">
+            <img src="img/krömgul.png" onclick="changeImage(this)" />
+            <img src="img/skynblock.png" onclick="changeImage(this)" />
+          </div>
+        </div>
 
         <div class="product-info">
           <h1>Skyn Block 30</h1>
           <p class="price">75 SEK</p>
+          <button
+            onclick="addToCart('Viva Skyn Cream', 149, 'img/2krämviva.png')"
+          >
+            Add to Cart!
+          </button>
+
           <div class="description">
-  <p>
-   Keep your skin safe and radiant with Skyn Block 30, a popular sunscreen designed for everyday protection. Its lightweight formula shields your skin from harmful UVA and UVB rays while leaving it smooth and comfortable.
+            <p>
+              Keep your skin safe and radiant with Skyn Block 30, a popular
+              sunscreen designed for everyday protection. Its lightweight
+              formula shields your skin from harmful UVA and UVB rays while
+              leaving it smooth and comfortable.
+            </p>
 
-  <ul>
-    <li>Sun Protection Made Easy: Guards against daily sun exposure.</li>
-    <li>Light & Comfortable: Absorbs quickly without a greasy feel.</li>
-    <li>Daily Use: Perfect for face and neck, ideal for daily use.</li>
-  </ul>
-</div>
-
-          </p>
-          <button class="ad-to-cart">Added to cart!</button>
+            <ul>
+              <li>
+                Sun Protection Made Easy: Guards against daily sun exposure.
+              </li>
+              <li>
+                Light & Comfortable: Absorbs quickly without a greasy feel.
+              </li>
+              <li>
+                Daily Use: Perfect for face and neck, ideal for daily use.
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
-<section class="related-products">
+      <section class="related-products">
+        <h2>You may also like</h2>
 
-  <h2>You may also like</h2>
+        <div class="related-grid">
+          <div class="related-card">
+            <img
+              src="img/smiley-woman-posing-with-face-cream.jpg"
+              alt="Skyn Block Ultra"
+            />
+            <h3>Skyn Block Ultra</h3>
+            <p class="price">99 SEK</p>
+            <button class="small-btn">View product</button>
+          </div>
 
-  <div class="related-grid">
+          <div class="related-card">
+            <img src="img/VIVAbakgrundkroppad.png" alt="Glow Shield" />
+            <h3>Glow Shield</h3>
+            <p class="price">99 SEK</p>
+            <button class="small-btn">View product</button>
+          </div>
 
-    <div class="related-card">
-      <img src="img/smiley-woman-posing-with-face-cream.jpg" alt="Skyn Block Ultra">
-      <h3>Skyn Block Ultra</h3>
-      <p class="price">99 SEK</p>
-      <button class="small-btn">View product</button>
-    </div>
-
-    <div class="related-card">
-      <img src="img/VIVAbakgrundkroppad.png" alt="Glow Shield">
-      <h3>Glow Shield</h3>
-      <p class="price">99 SEK</p>
-      <button class="small-btn">View product</button>
-    </div>
-
-    <div class="related-card">
-      <img src="img/skincare-cream-product-different-skin-tones.jpg" alt="Viva la Moist Body Lotion">
-      <h3>Viva la Moist Body Lotion</h3>
-      <p class="price">179 SEK</p>
-      <button class="small-btn">View product</button>
-    </div>
-
-  </div>
-
-</section>
-
+          <div class="related-card">
+            <img
+              src="img/skincare-cream-product-different-skin-tones.jpg"
+              alt="Viva la Moist Body Lotion"
+            />
+            <h3>Viva la Moist Body Lotion</h3>
+            <p class="price">179 SEK</p>
+            <button class="small-btn">View product</button>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer-section">
@@ -115,13 +147,13 @@
         <p>Email: info@vivaskyn.com</p>
         <p>Instagram: @Vivaskyn</p>
       </div>
-      <div class="footer-bottom">© Viva Skyn 2026</div> -->
+      <div class="footer-bottom">© Viva Skyn 2026</div>
     </footer>
     <script>
-function changeImage(element) {
-  document.getElementById("mainImage").src = element.src;
-}
-</script>
-
+      function changeImage(element) {
+        document.getElementById("mainImage").src = element.src;
+      }
+    </script>
+    <script src="js/script.js" defer></script>
   </body>
 </html>

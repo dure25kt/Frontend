@@ -23,7 +23,28 @@
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="product.html">Products</a></li>
-          <li><a href="cart.html">Cart</a></li>
+          <li class="cart-icon">
+            <a href="cart.html">
+              <svg
+                class="w-[24px] h-[24px] text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"
+                />
+              </svg>
+              <span id="cart-count">0</span>
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -54,6 +75,11 @@
           <img src="img/2krämviva.png" alt="Viva Skyn Cream" />
           <h3>Viva Skyn Cream</h3>
           <p class="price">149 SEK</p>
+          <button
+            onclick="addToCart('Viva Skyn Cream', 149, img/2krämviva.png)"
+          >
+            Add to Cart!
+          </button>
         </a>
 
         <a href="skynblock.html" class="product-card cream best">
@@ -147,6 +173,26 @@
           <img src="img/rosacroppad.pmg.png" alt="Sunkissed Recovery" />
           <h3>Viva Skyn Sunkissed Recovery</h3>
           <p class="price">149 SEK</p>
+        </div>
+
+        <div class="cartTab">
+          <h1>Shopping Cart</h1>
+          <div class="listCart">
+            <div class="item">
+              <img src="img/2krämviva.png" alt="Viva Skyn Cream" />
+            </div>
+            <div class="name">NAME</div>
+            <div class="totalPrice">149 SEK</div>
+            <div class="quantity">
+              <span class="minus"><</span>
+              <span>1</span>
+              <span class="plus">></span>
+            </div>
+          </div>
+          <div class="btn">
+            <button class="close">CLOSE</button>
+            <button class="checkOut">CHECK OUT</button>
+          </div>
         </div>
       </section>
     </main>
