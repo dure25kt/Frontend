@@ -73,56 +73,28 @@ document.addEventListener("DOMContentLoaded", () => {
   displayCart();
 });
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+//IMAGE SLIDER
 
-function addToCart(name, price, image) {
-  console.log("Försöker lägga till:", name); // Denna rad hjälper dig att se om klicket funkar!
-
-  const existingProduct = cart.find((item) => item.name === name);
-
-  if (existingProduct) {
-    existingProduct.quantity++;
-  } else {
-    cart.push({
-      name: name,
-      price: price,
-      image: image,
-      quantity: 1,
-    });
-  }
-
-  localStorage.setItem("cart", JSON.stringify(cart));
-  updateCartCount();
-
-  // Öppna sidomenyn automatiskt så användaren ser att det funkade
-  document.body.classList.add("showCart");
-}
-
-function updateCartCount() {
-  const countElement = document.getElementById("cart-count");
-  if (countElement) {
-    let total = cart.reduce((sum, item) => sum + item.quantity, 0);
-    countElement.textContent = total;
-  }
-}
-
-// Hantera öppna/stäng av kundvagnen (sidopanelen)
 document.addEventListener("DOMContentLoaded", () => {
-  updateCartCount();
+  const slider = document.querySelector(".image-row");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
 
-  const iconCart = document.querySelector(".cart-icon");
-  const closeBtn = document.querySelector(".close");
+  if (!slider || !prevBtn || !nextBtn) return;
 
-  if (iconCart) {
-    iconCart.addEventListener("click", (e) => {
-      e.preventDefault();
-      document.body.classList.toggle("showCart");
+  const scrollAmount = 300; //hur  långt den ska sccrolla efter varje klick
+
+  nextBtn.addEventListener("click", () => {
+    slider.scrollBy({
+      left: scrollAmount,
+      behavior: "smooth",
     });
-  }
+  });
 
-  if (closeBtn) {
-    closeBtn.addEventListener("click", () => {
-      document.body.classList.remove("showCart");
+  prevBtn.addEventListener("click", () => {
+    slider.scrollBy({
+      left: -scrollAmount,
+      behavior: "smooth",
     });
-  }
+  });
 });

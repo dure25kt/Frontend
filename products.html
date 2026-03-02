@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="js/script.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
@@ -52,7 +53,7 @@
     <main class="container products">
       <section class="products-hero">
         <img
-          src="img/storserum,png.png"
+          src="img/productbanner.png"
           alt="Our Products"
           class="our-products"
         />
@@ -70,23 +71,26 @@
         <button onclick="filterProducts('sets')">Sets</button>
       </section>
 
-      <section class="image-row">
-        <a href="vivaskyncream.html" class="product-card cream best">
-          <img src="img/2krämviva.png" alt="Viva Skyn Cream" />
-          <h3>Viva Skyn Cream</h3>
-          <p class="price">149 SEK</p>
-          <button
-            onclick="addToCart('Viva Skyn Cream', 149, img/2krämviva.png)"
-          >
-            Add to Cart!
-          </button>
-        </a>
+      <section class="product-grid">
+        <div class="product-card">
+          <div class="product-card-cream">
+            <a href="vivaskyncream.html" class="product-card-cream">
+              <img src="img/2krämviva.png" alt="Viva Skyn Cream" />
+              <h3>Viva Skyn Cream</h3>
+              <p class="price">149 SEK</p>
+            </a>
+          </div>
+        </div>
 
-        <a href="skynblock.html" class="product-card cream best">
-          <img src="img/krömgul.png" alt="Skyn Block 30" />
-          <h3>Skyn Block 30</h3>
-          <p class="price">75 SEK</p>
-        </a>
+        <div class="product-card">
+          <div class="product-card-cream">
+            <a href="skynblock.html" class="product-card-cream">
+              <img src="img/krömgul.png" alt="Skyn Block 30" />
+              <h3>Skyn Block</h3>
+              <p class="price">75 SEK</p>
+            </a>
+          </div>
+        </div>
 
         <div class="product-card sets best">
           <img
@@ -173,26 +177,6 @@
           <img src="img/rosacroppad.pmg.png" alt="Sunkissed Recovery" />
           <h3>Viva Skyn Sunkissed Recovery</h3>
           <p class="price">149 SEK</p>
-        </div>
-
-        <div class="cartTab">
-          <h1>Shopping Cart</h1>
-          <div class="listCart">
-            <div class="item">
-              <img src="img/2krämviva.png" alt="Viva Skyn Cream" />
-            </div>
-            <div class="name">NAME</div>
-            <div class="totalPrice">149 SEK</div>
-            <div class="quantity">
-              <span class="minus"><</span>
-              <span>1</span>
-              <span class="plus">></span>
-            </div>
-          </div>
-          <div class="btn">
-            <button class="close">CLOSE</button>
-            <button class="checkOut">CHECK OUT</button>
-          </div>
         </div>
       </section>
     </main>
