@@ -732,6 +732,7 @@ h1,
 .checkout-btn {
   display: inline-block;
   margin-top: 10px;
+  margin-bottom: 10px;
   background: var(--accent);
   color: white;
   padding: 10px 18px;
@@ -871,7 +872,7 @@ body.showCart .cartTab .container {
   height: auto; /* behåller proportionerna */
   display: block;
   object-fit: cover; /* beskär snyggt om bredden ändras */
-  border-radius: 0px; /* valfritt, rundade hörn */
+  border-radius: 0px;
   padding: 0;
-  margin: 0; /* luft mellan bilden och rubrik */
+  margin: 0;
 }
