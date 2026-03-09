@@ -865,3 +865,13 @@ body.showCart .cartTab .container {
   gap: 1.5rem;
   margin: 2rem 0;
 }
+
+.cart-img {
+  width: 100%; /* fyller hela bredden */
+  height: auto; /* behåller proportionerna */
+  display: block;
+  object-fit: cover; /* beskär snyggt om bredden ändras */
+  border-radius: 0px; /* valfritt, rundade hörn */
+  padding: 0;
+  margin: 0; /* luft mellan bilden och rubrik */
+}
