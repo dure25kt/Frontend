@@ -22,7 +22,9 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="products.html">Products</a></li>
           <li class="cart-icon">
+            <!-- Shopping cart icon that link to the cart-->
             <a href="cart.html">
+              <!--SVG icon that links to the cart page, a youtube video helped implement the cart system https://www.youtube.com/watch?v=gXWohFYrI0M&t=894s, and AI was used to generate the icon-->
               <svg
                 class="w-[24px] h-[24px] text-gray-800 dark:text-white"
                 aria-hidden="true"
@@ -32,6 +34,7 @@
                 fill="none"
                 viewBox="0 0 24 24"
               >
+                <!--Path that draws the cart icon-->
                 <path
                   stroke="currentColor"
                   stroke-linecap="round"
@@ -40,6 +43,8 @@
                   d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"
                 />
               </svg>
+
+              <!-- Shows the number of items currently in the cart (updated with java)-->
               <span id="cart-count">0</span>
             </a>
           </li>
@@ -56,8 +61,6 @@
         <h2>Total: <span id="cartTotal">0</span> SEK</h2>
         <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
       </div>
-
-      <div id="cartItems"></div>
     </main>
 
     <section>
@@ -83,6 +86,8 @@
       </div>
       <div class="footer-bottom">© Viva Skyn 2026</div>
     </footer>
+
+    <!-- javascript -->
     <script src="js/script.js"></script>
   </body>
 </html>

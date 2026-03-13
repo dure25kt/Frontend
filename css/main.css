@@ -53,7 +53,7 @@ main p {
   margin-top: -0.5rem;
 }
 
-/*Layouten*/
+/*Layout*/
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -69,7 +69,7 @@ header {
   z-index: 10;
 }
 
-/*Navigationen*/
+/*Navigation*/
 .header nav {
   display: flex;
   padding: 15px;
@@ -104,7 +104,7 @@ header {
   color: var(--accent-hover);
 }
 
-/*HERO*/
+/*hero*/
 .hero {
   text-align: center;
   padding: 4rem 0 6rem;
@@ -231,7 +231,7 @@ button:hover {
 .extra-images img {
   width: 100%;
   border-radius: 10px;
-  transform: transform 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .image-row img:hover,
@@ -304,7 +304,7 @@ button:hover {
   border-radius: 16px;
   transition:
     transform 0.3s ease,
-    box-shahow 0.3s ease;
+    box-shadow 0.3s ease;
 }
 
 .related-card:hover {
@@ -378,6 +378,7 @@ button:hover {
   }
 }
 
+/*image row / slider*/
 .image-row {
   display: flex;
   overflow: auto;
@@ -392,7 +393,7 @@ button:hover {
 }
 
 .image-row .product-card {
-  flex: 0 0 300px; /* varje kort tar 300px */
+  flex: 0 0 300px;
 }
 
 .image-row img {
@@ -464,24 +465,26 @@ button:hover {
   transform: translateY(-5px);
 }
 
+/*about us banner*/
 .about-banner {
-  width: 100%; /* fyller hela bredden */
-  height: auto; /* behåller proportionerna */
-  object-fit: cover; /* beskär snyggt om bredden ändras */
-  border-radius: 12px; /* valfritt, rundade hörn */
-  margin-bottom: 30px; /* luft mellan bilden och rubrik */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 30px;
 }
 
+/*banner to the products site*/
 .our-products {
-  width: 100%; /* fyller hela bredden */
+  width: 100%;
   max-width: 1200px;
-  height: auto; /* behåller proportionerna */
+  height: auto;
   display: block;
-  margin: 0 auto 30 px;
-  border-radius: 12px; /* valfritt, rundade hörn */
+  margin: 0 auto 30px;
+  border-radius: 12px;
 }
 
-/*Product page style*/
+/*product page style*/
 .product-page {
   display: flex;
   flex-direction: column;
@@ -551,6 +554,7 @@ button:hover {
   justify-items: center;
 }
 
+/*responsive layout*/
 @media (min-width: 768px) {
   .product-page {
     flex-direction: row;
@@ -584,7 +588,7 @@ button:hover {
 @media (max-width: 480px) {
   .image-row {
     grid-template-columns: 3fr;
-    gap: 1re;
+    gap: 1rem;
   }
 }
 
@@ -594,6 +598,7 @@ button:hover {
   }
 }
 
+/*thumbnails in the product pages*/
 .thumbnails {
   display: flex;
   gap: 10px;
@@ -613,7 +618,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* RELATED PRODUCTS - STORE STYLE */
+/*related products*/
 
 .related-products {
   margin-top: 80px;
@@ -662,13 +667,13 @@ button:hover {
   margin-bottom: 15px;
 }
 
-/* Hover effect */
+/*hover effect */
 .related-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* Button */
+/*button */
 .small-btn {
   background: transparent;
   border: 1px solid var(--accent);
@@ -692,16 +697,16 @@ html {
 }
 
 .did-you {
-  width: 100%; /* fyller hela bredden */
-  height: auto; /* behåller proportionerna */
+  width: 100%;
+  height: auto;
   display: block;
-  object-fit: cover; /* beskär snyggt om bredden ändras */
-  border-radius: 0px; /* valfritt, rundade hörn */
+  object-fit: cover;
+  border-radius: 0px;
   padding: 0;
-  margin: 0; /* luft mellan bilden och rubrik */
+  margin: 0;
 }
 
-/*FOOTER*/
+/*footer*/
 
 h1,
 .checkout-page h1 {
@@ -709,6 +714,7 @@ h1,
   margin: 2rem 0;
 }
 
+/*cart item layout*/
 .cart-item {
   display: flex;
   align-items: center;
@@ -729,6 +735,7 @@ h1,
   margin-top: 30px;
 }
 
+/*checkout button*/
 .checkout-btn {
   display: inline-block;
   margin-top: 10px;
@@ -740,24 +747,7 @@ h1,
   text-decoration: none;
 }
 
-.checkout-form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.checkout-form input {
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-}
-
-.checkout-form button {
-  margin-top: 15px;
-}
-
+/*product filter for category*/
 .product-filters {
   display: flex;
   flex-wrap: wrap;
@@ -767,6 +757,7 @@ h1,
   margin-top: 1rem;
 }
 
+/*filter buttons*/
 .product-filters button {
   background-color: var(--accent);
   color: var(--bg-soft);
@@ -781,6 +772,9 @@ h1,
 .product-filters button:hover {
   background-color: var(--accent);
 }
+
+/*side cart styles*/
+/*some of the lines was addapted by AI, line 786, 791 and 792, 795 and 796*/
 .cartTab {
   width: 400px;
   background-color: var(--accent);
@@ -791,7 +785,7 @@ h1,
   grid-template-rows: 70px 1fr 70px;
   transition: 0.5s;
   box-shadow: -10px 0 40px rgba(0, 0, 0, 0.08);
-  border-left: 1px solied #eee;
+  border-left: 1px solid #eee;
 }
 
 body.showCart .cartTab {
@@ -824,31 +818,18 @@ body.showCart .cartTab .container {
   background-color: #eee;
 }
 
+/*cart item inside cart*/
 .cartTab .listCart .item img {
   width: 100%;
 }
 
+/* grid layout for items in side cart*/
 .cartTab .listCart .item {
   display: grid;
   grid-template-columns: 70px 150px 50px 1fr;
   gap: 10 px;
   text-align: center;
   align-items: center;
-}
-
-.listCart .quantity span {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  background-color: #eee;
-  color: #333;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.listCart .quantity span:nth-child(2) {
-  background-color: transparent;
-  color: #eee;
 }
 
 .listCart .item:nth-child(even) {
@@ -868,10 +849,10 @@ body.showCart .cartTab .container {
 }
 
 .cart-img {
-  width: 100%; /* fyller hela bredden */
-  height: auto; /* behåller proportionerna */
+  width: 100%;
+  height: auto;
   display: block;
-  object-fit: cover; /* beskär snyggt om bredden ändras */
+  object-fit: cover;
   border-radius: 0px;
   padding: 0;
   margin: 0;

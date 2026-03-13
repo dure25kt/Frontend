@@ -59,7 +59,7 @@
             class="main-product-img"
           />
 
-          <!-- Små bilder -->
+          <!-- tiny pictures used as thumnails -->
           <div class="thumbnails">
             <img src="img/krömgul.png" onclick="changeImage(this)" />
             <img src="img/skynblock.png" onclick="changeImage(this)" />
@@ -95,6 +95,8 @@
           </button>
         </div>
       </section>
+
+      <!--related product section-->
       <section class="related-products">
         <h2>You may also like</h2>
 
@@ -147,6 +149,7 @@
       </div>
       <div class="footer-bottom">© Viva Skyn 2026</div>
     </footer>
+    <!-- javascript for changing the main product image-->
     <script>
       function changeImage(element) {
         document.getElementById("mainImage").src = element.src;
